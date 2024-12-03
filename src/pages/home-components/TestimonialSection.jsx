@@ -61,7 +61,7 @@ const renderTestimonials = (condition) => {
   return (
     <>
       {testimonials.map((testimonial) => testimonial.id % 2 === num && (
-        <div className={testimonial.className}>
+        <div key={testimonial.id} className={testimonial.className}>
           <div className="flex items-center mb-4">
             <img
               src={testimonial.image}
