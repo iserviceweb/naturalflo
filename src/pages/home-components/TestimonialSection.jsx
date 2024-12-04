@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from 'react';
+import { BsChevronUp } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 
 const testimonials = [
   {
@@ -27,7 +29,7 @@ const testimonials = [
     feedback:
       "I've been using this service for years, and it never disappoints. The support is top-notch!",
     className: "col-span-1 bg-white shadow-md rounded-lg p-6 text-left m-4",
-  },{
+  }, {
     id: 4,
     name: "Michael Davis",
     title: "Product Manager, ABC Tech",
@@ -56,11 +58,26 @@ const testimonials = [
   },
 ];
 
-const renderTestimonials = (condition) => {
-  const num = condition === 'odd' ? 1 : 0;
+const renderAllTestimonials = () => {
+
+
+const [expandedTestimonials, setExpandedTestimonials] = useState({});
+
+const toggleExpand = (id) => {
+  console.log(id);
+  
+  setExpandedTestimonials((prev) => ({
+    ...prev,
+    [id]: !prev[id], // Toggle the expanded state for the clicked testimonial
+  }));
+};
+
+const renderTestimonials = (parity) => {
+  const conditions = { "odd": 1, "even": 0, "null": "null" };
+  const isNull = parity === 'null';
   return (
     <>
-      {testimonials.map((testimonial) => testimonial.id % 2 === num && (
+      {testimonials.map((testimonial) => (isNull || testimonial.id % 2 === conditions[parity]) && (
         <div key={testimonial.id} className={testimonial.className}>
           <div className="flex items-center mb-4">
             <img
@@ -75,12 +92,41 @@ const renderTestimonials = (condition) => {
               <p className="text-sm text-gray-600">{testimonial.title}</p>
             </div>
           </div>
-          <p className="text-gray-700 italic">"{testimonial.feedback}"</p>
+          <p
+            className={`text-gray-700 italic overflow-hidden
+              lg:max-h-none lg:whitespace-normal
+              ${expandedTestimonials[testimonial.id]
+                ? 'max-h-none overflow-visible whitespace-normal'
+                : 'max-h-[3em] overflow-hidden whitespace-nowrap text-ellipsis'} 
+              `}>
+            "{testimonial.feedback}"
+          </p>
+          <div className="text-blue-500 flex items-center lg:hidden"
+            onClick={() => {toggleExpand(testimonial.id)}}
+          >
+            <span className="mr-1 font-bold">{expandedTestimonials[testimonial.id] ? 'View Less' : 'View More'}</span>
+            <BsChevronDown className={`self-center stroke-1 transition-transform ${expandedTestimonials[testimonial.id] ? 'rotate-180' : ''}`} />
+          </div>
         </div>
       ))
       }
     </>
   );
+};
+
+  return (
+    <div className="grid grid-cols-2">
+      <div className="hidden md:block">
+        {renderTestimonials('odd')}
+      </div>
+      <div className="hidden md:block">
+        {renderTestimonials('even')}
+      </div>
+      <div className="col-span-2 block md:hidden">
+        {renderTestimonials('null')}
+      </div>
+    </div>
+  )
 };
 
 const TestimonialSection = () => {
@@ -94,14 +140,7 @@ const TestimonialSection = () => {
           Hear from our satisfied customers and discover how we've helped them
           achieve success.
         </p>
-        <div className="grid grid-cols-2">
-          <div className="col-span-1">
-            {renderTestimonials('odd')}
-          </div>
-          <div className="col-span-1">
-            {renderTestimonials('even')}
-          </div>
-        </div>
+        {renderAllTestimonials()}
       </div>
     </section>
   );

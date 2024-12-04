@@ -28,37 +28,37 @@ const OfferSection = () => {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="grid grid-cols-12 p-4 space-x-4 w-full max-w-screen-xl">
+            <div className="grid grid-cols-12 p-4 md:space-x-4 w-full max-w-screen-xl">
                 <RenderOffer
-                    style = "col-span-7 relative"
+                    style = "col-span-12 md:col-span-7 relative"
                     img = {<img src={offers[0].img} alt="" className="w-full max-w-[44em] h-full" />}
-                    discount = {<h2 className="text-[3.2vw] font-bold mr-4 mb-5">{offers[0].discount}</h2>}
+                    discount = {<h2 className="text-[1em] md:text-[2.5em] font-bold mr-4 mb-5">{offers[0].discount}</h2>}
                     Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-end bg-black bg-opacity-10 text-white text-center w-full max-w-[44em]")}
                     linkA = {
-                        <a href="#" className="text-[1.4vw] outline outline-1 outline-white text-white py-2 px-8 mr-4 hover:text-black hover:bg-white transition duration-300">
+                        <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 mr-4 hover:text-black hover:bg-white transition duration-300">
                             Shop Now
                         </a>
                     }
                 />
-                <div className="col-span-5 grid grid-cols-1">
+                <div className="col-span-12 md:col-span-5 grid grid-cols-1 mt-8 md:mt-0">
                     <RenderOffer
                         style = "relative"
-                        discount = {<h2 className="text-[2.7vw] font-bold ml-4 mb-5">{offers[1].discount}</h2>}
-                        img = {<img src={offers[1].img} alt="" className="w-full max-w-[32em] object-cover mb-4" />}
-                        Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full max-w-[32em] mb-4")}
+                        discount = {<h2 className="text-[1em] md:text-[2em] font-bold ml-4 mb-5">{offers[1].discount}</h2>}
+                        img = {<img src={offers[1].img} alt="" className="w-full md:max-w-[32em] object-cover mb-4" />}
+                        Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full md:max-w-[32em] mb-4")}
                         linkA = {
-                            <a href="#" className="text-[1.4vw] outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
+                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
                                 Shop Now
                             </a>
                         }
                     />
                     <RenderOffer
                         style = "relative"
-                        discount = {<h2 className="text-[2.7vw] font-bold ml-4 mb-5">{offers[2].discount}</h2>}
-                        img = {<img src={offers[2].img} alt="" className="w-full max-w-[32em] object-cover mt-4" />}
-                        Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full max-w-[32em] mt-4")}
+                        discount = {<h2 className="text-[1em] md:text-[2em] font-bold ml-4 mb-5">{offers[2].discount}</h2>}
+                        img = {<img src={offers[2].img} alt="" className="w-full md:max-w-[32em] object-cover mt-4" />}
+                        Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full md:max-w-[32em] mt-4")}
                         linkA = {
-                            <a href="#" className="text-[1.4vw] outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
+                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
                                 Shop Now
                             </a>
                         }

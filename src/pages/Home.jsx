@@ -1,6 +1,6 @@
 
 import React from "react";
-import Header from "./home-components/Header";
+import Header from "./general-components/Header";
 import IntroSection from "./home-components/IntroSection"
 import OfferSection from "./home-components/OfferSection";
 import ProductSection from "./home-components/ProductSection";
