@@ -1,8 +1,9 @@
-import React from "react";
+import React, { forwardRef } from 'react';
+import { BiLogoEbay, BiLogoEtsy } from 'react-icons/bi';
 
-const AboutSection = () => {
+const AboutSection = forwardRef(({}, ref) => {
   return (
-    <div className="py-20 flex flex-col items-center bg-[#ebf3fa]">
+    <div ref={ref} className="py-20 flex flex-col items-center bg-[#ebf3fa]">
       <div className="container">
         <div className="flex flex-wrap">
           {/* Image Section */}
@@ -29,18 +30,21 @@ const AboutSection = () => {
                 Lorem Ipsum generators on the Internet tend to repeat predefined
                 chunks.
               </p>
-              <a
-                href="#"
-                className="text-blue-500 font-semibold hover:underline"
-              >
-                Read More
-              </a>
+              <h2 className="text-xl font-bold">Check out these links</h2>
+              <div className="flex">
+                <a href="#">
+                  <BiLogoEbay className="w-16 h-16 rounded-full text-blue-400 outline outline-4 outline-blue-400 m-4 hover:scale-110"/>
+                </a>
+                <a href="#">
+                  <BiLogoEtsy className="w-16 h-16 rounded-full text-blue-400 outline outline-4 outline-blue-400 m-4  hover:scale-110"/>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default AboutSection;

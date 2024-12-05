@@ -3,7 +3,7 @@ import ShowAllTestimonials from './testimonial-components/ShowAllTestimonials';
 
 const TestimonialSection = () => {
   return (
-    <section className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12">
       <div className="mx-auto px-10 text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">
           What Our Clients Say
@@ -14,7 +14,7 @@ const TestimonialSection = () => {
         </p>
         <ShowAllTestimonials/>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 // Lazy-loaded components
 const Home = lazy(() => import("./pages/Home"));
+const TheScience = lazy(() => import("./pages/TheScience"));
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route exact path="/" element={<Home/>} />
+                    <Route exact path="/the-science" element={<TheScience/>} />
                     {/* <Route path="/services" element={<Services/>}/> */}
                 </Routes>
             </Suspense>
