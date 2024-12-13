@@ -7,5 +7,40 @@
     font-family: 'Zen Dots', cursive;
     background-color: #FBFCFD;
   } */
+  body {
+    color: #f5f2e7;
+  }
+
+  .nf.bg-baja{
+    background-color: #BFA989;
+  }
+
+  .nf.text-olive{
+    color: #797E55;
+  }
+
+  .nf.bg-olive{
+    background-color: #797E55;
+  }
+
+  .nf.outline-olive{
+    outline: #797E55;
+  }
   
+  .nf.bg-eggshell{
+    background-color: #f0ead6;
+  }
+
+  .nf.text-taupe-light{
+    color: #c0b8a6;
+  }
+
+  .nf.text-taupe{
+    color: #b3aca4;
+  }
+
+  .nf.hover\:text-olive:hover{
+    color: #797E55;
+  }
+
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const IntroSection = () => {
   return (
-    <section className="slider_section py-10 bg-gray-50">
+    <section className="slider_section py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 lg:w-5/12">
@@ -11,7 +11,7 @@ const IntroSection = () => {
                 We Sell The <br />
                 Best Fruits
               </h1>
-              <p className="text-gray-600 mt-4">
+              <p className="nf text-taupe-light mt-4">
                 Anything embarrassing hidden in the middle of text. All the Lorem Ipsum. Anything embarrassing hidden in the middle of text. All the Lorem Ipsum.
               </p>
               <div className="btn-box mt-6 flex space-x-4">
@@ -34,7 +34,7 @@ const IntroSection = () => {
           <div className="w-full md:w-1/2 lg:w-7/12">
             <div className="img-box">
               <img
-                src="images/slider-img.png"
+                src="images/temp/slider-img.png"
                 className="w-full rounded-lg"
               />
             </div>

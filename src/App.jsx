@@ -11,15 +11,14 @@ const TheScience = lazy(() => import("./pages/TheScience"));
 function App() {
 
     return (
-        <>
+        <div className="nf bg-olive">
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/the-science" element={<TheScience/>} />
-                    {/* <Route path="/services" element={<Services/>}/> */}
                 </Routes>
             </Suspense>
-        </>
+        </div>
     );
 }
 

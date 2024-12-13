@@ -23,7 +23,7 @@ const TestimonialBody = ({ testimonial }) => {
             `}>
             "{feedback}"
         </p>
-        <div className="inline-flex text-blue-500 flex items-center lg:hidden"
+        <div className="inline-flex nf text-olive flex items-center lg:hidden"
             onClick={() => { toggleExpand(id) }}
         >
             <span className="mr-1 font-bold">{expandedTestimonials[id] ? 'View Less' : 'View More'}</span>

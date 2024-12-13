@@ -2,9 +2,9 @@ import React from "react";
 
 const OfferSection = () => {
     const offers = [
-        { img: "images/o1.jpg", discount: "Up to 20% Off", style: "offer-box1" },
-        { img: "images/o2.jpg", discount: "Up to 10% Off", style: "offer-box2" },
-        { img: "images/o3.jpg", discount: "Up to 15% Off", style: "offer-box3" },
+        { img: "images/temp/o1.jpg", discount: "Up to 20% Off", style: "offer-box1" },
+        { img: "images/temp/o2.jpg", discount: "Up to 10% Off", style: "offer-box2" },
+        { img: "images/temp/o3.jpg", discount: "Up to 15% Off", style: "offer-box3" },
     ];
 
     const RenderOffer = ({style, img, discount, Shadow, linkA}) => {
@@ -35,7 +35,7 @@ const OfferSection = () => {
                     discount = {<h2 className="text-[1em] md:text-[2.5em] font-bold mr-4 mb-5">{offers[0].discount}</h2>}
                     Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-end bg-black bg-opacity-10 text-white text-center w-full max-w-[44em]")}
                     linkA = {
-                        <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 mr-4 hover:text-black hover:bg-white transition duration-300">
+                        <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 mr-4 hover:text-black hover:nf bg-eggshell transition duration-300">
                             Shop Now
                         </a>
                     }
@@ -47,7 +47,7 @@ const OfferSection = () => {
                         img = {<img src={offers[1].img} alt="" className="w-full md:max-w-[32em] object-cover mb-4" />}
                         Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full md:max-w-[32em] mb-4")}
                         linkA = {
-                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
+                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:nf bg-eggshell transition duration-300">
                                 Shop Now
                             </a>
                         }
@@ -58,7 +58,7 @@ const OfferSection = () => {
                         img = {<img src={offers[2].img} alt="" className="w-full md:max-w-[32em] object-cover mt-4" />}
                         Shadow = {renderDivWrapper("absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-10 text-white text-center w-full md:max-w-[32em] mt-4")}
                         linkA = {
-                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:bg-white transition duration-300">
+                            <a href="#" className="text-sm md:text-md lg:text-lg xl:text-2xl outline outline-1 outline-white text-white py-2 px-8 ml-4 hover:text-black hover:nf bg-eggshell transition duration-300">
                                 Shop Now
                             </a>
                         }

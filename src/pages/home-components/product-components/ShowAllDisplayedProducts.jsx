@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from 'react-redux';
 
-const ShowAllProducts = () => {
+const ShowAllDisplayedProducts = () => {
 
     const products = useSelector(state => state.product.products);
 
@@ -26,7 +26,7 @@ const ShowAllProducts = () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-                <div key={index} className="grid grid-rows-4 border rounded-lg shadow-md overflow-hidden bg-white">
+                <div key={index} className="grid grid-rows-4 rounded-lg shadow-md overflow-hidden nf bg-eggshell">
                     <div className="flex row-span-3">
                         <img src={product.img} alt={product.name} className="w-full object-contain p-10 aspect-square"/>
                     </div>
@@ -37,4 +37,4 @@ const ShowAllProducts = () => {
     );
 };
 
-export default ShowAllProducts
+export default ShowAllDisplayedProducts

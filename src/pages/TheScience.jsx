@@ -12,14 +12,13 @@ const TheScience = () => {
     return (
         <div ref={scienceRef}>
             <Header refs={refs} />
-            <div className="py-20 flex flex-col items-center bg-[#ebf3fa]">
+            <div className="py-20 flex flex-col items-center">
                 <div className="container">
                     <div className="flex flex-wrap">
-                        {/* Image Section */}
                         <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                             <div className="img-box">
                                 <img
-                                    src="images/b2.jpg"
+                                    src="images/temp/b2.jpg"
                                     alt="Science of Fruits"
                                     className="w-full h-auto object-cover"
                                 />

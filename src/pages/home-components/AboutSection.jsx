@@ -3,14 +3,14 @@ import { BiLogoEbay, BiLogoEtsy } from 'react-icons/bi';
 
 const AboutSection = forwardRef(({}, ref) => {
   return (
-    <div ref={ref} className="py-20 flex flex-col items-center bg-[#ebf3fa]">
+    <div ref={ref} className="py-20 flex flex-col items-center">
       <div className="container">
         <div className="flex flex-wrap">
           {/* Image Section */}
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div className="img-box">
               <img
-                src="images/about-img.png"
+                src="images/temp/about-img.png"
                 alt="About Us"
                 className="w-full h-auto object-cover"
               />
@@ -23,7 +23,7 @@ const AboutSection = forwardRef(({}, ref) => {
               <div className="mb-6">
                 <h2 className="text-3xl font-bold">About Us</h2>
               </div>
-              <p className="text-lg text-gray-700 mb-4">
+              <p className="text-lg nf text-taupe-light mb-4">
                 Words which don't look even slightly believable. If you are
                 going to use a passage of Lorem Ipsum, you need to be sure there
                 isn't anything embarrassing hidden in the middle of text. All the
@@ -33,10 +33,10 @@ const AboutSection = forwardRef(({}, ref) => {
               <h2 className="text-xl font-bold">Check out these links</h2>
               <div className="flex">
                 <a href="#">
-                  <BiLogoEbay className="w-16 h-16 rounded-full text-blue-400 outline outline-4 outline-blue-400 m-4 hover:scale-110"/>
+                  <BiLogoEbay className="w-16 h-16 rounded-full outline outline-4 nf text-eggshell m-4 hover:scale-110"/>
                 </a>
                 <a href="#">
-                  <BiLogoEtsy className="w-16 h-16 rounded-full text-blue-400 outline outline-4 outline-blue-400 m-4  hover:scale-110"/>
+                  <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 nf text-eggshell m-4  hover:scale-110"/>
                 </a>
               </div>
             </div>
