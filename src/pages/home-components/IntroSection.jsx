@@ -1,40 +1,40 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const IntroSection = () => {
+  const navigate = useNavigate();
   return (
-    <section className="slider_section py-10">
+    <section className="py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 lg:w-5/12">
             <div>
-              <h1 className="text-4xl font-bold leading-tight">
-                We Sell The <br />
-                Best Fruits
+              <h1 className="text-5xl font-bold leading-tight">
+                Flow with Nature, Glow with Confidence
               </h1>
-              <p className="nf text-taupe-light mt-4">
-                Anything embarrassing hidden in the middle of text. All the Lorem Ipsum. Anything embarrassing hidden in the middle of text. All the Lorem Ipsum.
+              <p className="text-2xl nf text-taupe-light mt-4">
+                Embrace Natural Ingredients Perfectly Suited for Your Hair.
               </p>
               <div className="btn-box mt-6 flex space-x-4">
-                <a
-                  href="#"
-                  className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+                <div
+                  className="nf bg-baja text-white py-2 px-4 rounded hover:bg-baja-dark hover:text-gray-300 transition duration-300"
+                  onClick={()=>{navigate('/#about')}}
                 >
                   Read More
-                </a>
-                <a
-                  href="#"
-                  className="bg-gray-100 text-gray-800 py-2 px-4 rounded hover:bg-gray-200 transition duration-300"
+                </div>
+                <div
+                  className="nf bg-eggshell text-gray-800 py-2 px-4 rounded hover:bg-eggshell-dark transition duration-300"
+                  onClick={()=>{navigate('/#contact')}}
                 >
                   Contact Us
-                </a>
+                </div>
               </div>
             </div>
           </div>
-          {/* Image Section */}
           <div className="w-full md:w-1/2 lg:w-7/12">
             <div className="img-box">
               <img
-                src="images/temp/slider-img.png"
+                src="images/temp/soap-temp.png"
                 className="w-full rounded-lg"
               />
             </div>

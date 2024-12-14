@@ -10,7 +10,7 @@ const AboutSection = forwardRef(({}, ref) => {
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div className="img-box">
               <img
-                src="images/temp/about-img.png"
+                src="images/temp/about-temp.png"
                 alt="About Us"
                 className="w-full h-auto object-cover"
               />

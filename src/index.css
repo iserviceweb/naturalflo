@@ -15,6 +15,10 @@
     background-color: #BFA989;
   }
 
+  .nf.hover\:bg-baja-dark:hover{
+    background-color: #a79376;
+  }
+
   .nf.text-olive{
     color: #797E55;
   }
@@ -29,6 +33,10 @@
   
   .nf.bg-eggshell{
     background-color: #f0ead6;
+  }
+
+  .nf.hover\:bg-eggshell-dark:hover{
+    background-color: #cec8b5;
   }
 
   .nf.text-taupe-light{

@@ -20,34 +20,31 @@ const sendEmail = (e) => {
     e.target.reset();
 };
 
-const ContactSection = forwardRef(({}, ref) => {
-
-    const InputBox = ({title, label, type, placeholder, rows}) => {
+const ContactSection = forwardRef(({ }, ref) => {
+    const InputBox = ({ title, label, type, placeholder, rows }) => {
         const TypeBox = () => {
-            console.log(type);
-            
-            if(type === 'textbox'){
+            if (type === 'textbox') {
                 return (
-                <textarea
-                name={title}
-                    id={title}
-                    rows={rows}
-                    required
-                    placeholder={placeholder}
-                    className="block w-full mt-1 p-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none scroll-y"
-                    onKeyDown={(e)=>{if(e.key==='enter') e.preventDefault()}}
-                ></textarea>
-            )
-            }else{
+                    <textarea
+                        name={title}
+                        id={title}
+                        rows={rows}
+                        required
+                        placeholder={placeholder}
+                        className="block w-full mt-1 p-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none scroll-y"
+                        onKeyDown={(e) => { if (e.key === 'enter') e.preventDefault() }}
+                    ></textarea>
+                )
+            } else {
                 return (
                     <input
-                    type={type}
-                    name={title}
-                    id={title}
-                    required
-                    placeholder={placeholder}
-                    className="block w-full mt-1 p-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
+                        type={type}
+                        name={title}
+                        id={title}
+                        required
+                        placeholder={placeholder}
+                        className="block w-full mt-1 p-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    />
                 )
             }
         }
@@ -59,7 +56,7 @@ const ContactSection = forwardRef(({}, ref) => {
                 >
                     {label}
                 </label>
-                <TypeBox/>
+                <TypeBox />
             </div>
         );
     };
@@ -72,23 +69,23 @@ const ContactSection = forwardRef(({}, ref) => {
                 </h2>
                 <form className="space-y-4" onSubmit={sendEmail}>
                     <InputBox
-                        title = "name"
-                        label = "Your Name"
-                        type = "text"
-                        placeholder = "John Doe"
+                        title="name"
+                        label="Your Name"
+                        type="text"
+                        placeholder="John Doe"
                     />
                     <InputBox
-                        title = "email"
-                        label = "Your Email"
-                        type = "email"
-                        placeholder = "example@domain.com"
+                        title="email"
+                        label="Your Email"
+                        type="email"
+                        placeholder="example@domain.com"
                     />
                     <InputBox
-                        title = "message"
-                        label = "Your Message"
-                        type = "textbox"
-                        rows = "4"
-                        placeholder = "Write your message here..."
+                        title="message"
+                        label="Your Message"
+                        type="textbox"
+                        rows="4"
+                        placeholder="Write your message here..."
                     />
 
                     <div>

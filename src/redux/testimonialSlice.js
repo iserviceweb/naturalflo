@@ -56,7 +56,6 @@ const testimonials = [
     },
 ];
 
-
 const initialState = {
     testimonials: testimonials
 }

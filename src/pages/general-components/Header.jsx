@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Header = ({ refs }) => {
+const Header = ({ refs, refs2 }) => {
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -22,7 +22,7 @@ const Header = ({ refs }) => {
       <header>
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between uppercase">
-            <button className="text-2xl font-bold"
+            <button className="text-4xl font-bold"
               onClick={()=>{navigate('/')}}
             >
               <span>NaturalFlo</span>

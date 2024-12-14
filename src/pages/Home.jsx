@@ -19,6 +19,12 @@ const Home = () => {
     '/#contact': {pathname: '/', hash: '#contact', ref: contactSectionRef},
   };
 
+  const refs2 = {
+    'home': homeRef,
+    'about': aboutSectionRef,
+    'contact': contactSectionRef,
+  };
+
   return (
     <div className="home" ref={homeRef}>
       <Header refs={refs} />
