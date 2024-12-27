@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import Header from "./general-components/Header";
 import IntroSection from "./home-components/IntroSection"
-import OfferSection from "./home-components/OfferSection";
 import DisplayedProductSection from "./home-components/DisplayedProductSection";
 import AboutSection from "./home-components/AboutSection";
 import TestimonialSection from "./home-components/TestimonialSection";

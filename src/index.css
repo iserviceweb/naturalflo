@@ -7,8 +7,12 @@
     font-family: 'Zen Dots', cursive;
     background-color: #FBFCFD;
   } */
-  body {
+  /* body {
     color: #f5f2e7;
+  } */
+
+  .nf.text-baja{
+    color: #BFA989;
   }
 
   .nf.bg-baja{
@@ -20,19 +24,19 @@
   }
 
   .nf.text-olive{
-    color: #797E55;
+    color: #b0d7f1;
   }
 
   .nf.bg-olive{
-    background-color: #797E55;
+    background-color: #b0d7f1;
   }
 
   .nf.outline-olive{
-    outline: #797E55;
+    outline: #b0d7f1;
   }
   
   .nf.bg-eggshell{
-    background-color: #f0ead6;
+    background-color: #f2f2f2;
   }
 
   .nf.hover\:bg-eggshell-dark:hover{
@@ -40,11 +44,11 @@
   }
 
   .nf.text-taupe-light{
-    color: #c0b8a6;
+    color: #979797;
   }
 
   .nf.text-taupe{
-    color: #b3aca4;
+    color: #b5b5b5;
   }
 
   .nf.hover\:text-olive:hover{
