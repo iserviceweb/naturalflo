@@ -21,22 +21,22 @@ const AboutSection = forwardRef(({}, ref) => {
           <div className="w-full md:w-1/2 px-4">
             <div className="">
               <div className="mb-6">
-                <h2 className="text-3xl font-bold">About Us</h2>
+                <h2 className="text-3xl font-bold playwrite">About Us</h2>
               </div>
-              <p className="text-lg nf text-taupe-light mb-4">
+              <p className="text-lg text-gray-600 mb-4">
                 Words which don't look even slightly believable. If you are
                 going to use a passage of Lorem Ipsum, you need to be sure there
                 isn't anything embarrassing hidden in the middle of text. All the
                 Lorem Ipsum generators on the Internet tend to repeat predefined
                 chunks.
               </p>
-              <h2 className="text-xl font-bold">Check out these links</h2>
+              <h2 className="text-xl font-bold playwrite">Check out these links</h2>
               <div className="flex">
                 <a href="#">
-                  <BiLogoEbay className="w-16 h-16 rounded-full outline outline-4 nf text-eggshell m-4 hover:scale-110"/>
+                  <BiLogoEbay className="w-16 h-16 rounded-full outline outline-4 m-4 hover:scale-110"/>
                 </a>
                 <a href="#">
-                  <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 nf text-eggshell m-4  hover:scale-110"/>
+                  <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 m-4  hover:scale-110"/>
                 </a>
               </div>
             </div>

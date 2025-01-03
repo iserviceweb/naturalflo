@@ -8,8 +8,8 @@ const DisplayedProductSection = () => {
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">Our Products</h2>
-                    <p className="nf text-taupe-light">
+                    <h2 className="text-3xl font-bold mb-4 playwrite">Our Products</h2>
+                    <p className="text-gray-600">
                         Which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an.
                     </p>
                 </div>

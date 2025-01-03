@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Header = ({ refs, refs2 }) => {
+const Header = ({ refs, redirect }) => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const hashRef = {
+    '#about': 'about',
+    '#contact': 'contact',
+  }
   
   const handleSmoothScroll = (ref) => {
+    if(redirect){
+      navigate(ref);
+      return;
+    }
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(()=>{
-    const link = refs[location.pathname+location.hash];
-    if(link){
-      handleSmoothScroll(link.ref);
-    };
+    const destRef = refs[hashRef[location.hash]];
+    if (destRef) {
+      console.log(handleSmoothScroll(destRef));
+    }
   }, [location]);
-  
 
   return (
     <div className="relative sticky top-0 nf bg-baja z-50">
@@ -25,7 +33,7 @@ const Header = ({ refs, refs2 }) => {
             <button className="text-4xl font-bold"
               onClick={()=>{navigate('/')}}
             >
-              <span>NaturalFlo</span>
+              <span className="playwrite">NaturalFlo</span>
             </button>
             <button
               className="block md:hidden focus:outline-none"
@@ -38,22 +46,22 @@ const Header = ({ refs, refs2 }) => {
             <div className="hidden md:flex p-5">
               <ul className="flex space-x-10">
                 <li className="">
-                  <button className={"p-1 rounded-md nf hover:text-olive uppercase underline underline-offset-4"}
-                    onClick={() => {navigate('/')}}
+                  <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                    onClick={() => {handleSmoothScroll(refs.home)}}
                   >
                     Home
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md nf hover:text-olive uppercase underline underline-offset-4"}
-                    onClick={() => { navigate('/#about') }}
+                <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                    onClick={() => {handleSmoothScroll(refs.about)}}
                   >
                     About
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md nf hover:text-olive uppercase underline underline-offset-4"}
-                    onClick={() => { navigate('/#contact') }}
+                <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                    onClick={() => {handleSmoothScroll(refs.contact)}}
                   >
                     Contact Us
                   </button>
@@ -63,7 +71,6 @@ const Header = ({ refs, refs2 }) => {
           </nav>
         </div>
       </header>
-      {/* Header Section Ends */}
     </div>
   );
 };

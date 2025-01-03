@@ -6,6 +6,7 @@ import DisplayedProductSection from "./home-components/DisplayedProductSection";
 import AboutSection from "./home-components/AboutSection";
 import TestimonialSection from "./home-components/TestimonialSection";
 import ContactSection from "./home-components/ContactSection";
+import HairIDIntro from "./home-components/HairIDIntro";
 
 const Home = () => {
   const homeRef = useRef(null);
@@ -13,12 +14,6 @@ const Home = () => {
   const contactSectionRef = useRef(null);
 
   const refs = {
-    '/': {pathname: '/', hash: '', ref: homeRef},
-    '/#about': {pathname: '/', hash: '#about', ref: aboutSectionRef},
-    '/#contact': {pathname: '/', hash: '#contact', ref: contactSectionRef},
-  };
-
-  const refs2 = {
     'home': homeRef,
     'about': aboutSectionRef,
     'contact': contactSectionRef,
@@ -28,7 +23,7 @@ const Home = () => {
     <div className="home" ref={homeRef}>
       <Header refs={refs} />
       <IntroSection/>
-      {/* <OfferSection/> */}
+      <HairIDIntro/>
       <DisplayedProductSection/>
       <AboutSection ref={aboutSectionRef}/>
       <TestimonialSection/>

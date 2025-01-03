@@ -15,7 +15,7 @@ const ShowAllTestimonials = () => {
         return (<>
             {testimonials.map((testimonial) =>
                 (isNull || testimonial.id % 2 === conditions[parity]) && (
-                    <div key={testimonial.id} className={testimonial.className}>
+                    <div key={testimonial.id} className={`${testimonial.className} nf bg-eggshell nf text-cornflower`}>
                         <TestimonialHeader testimonial={testimonial} />
                         <TestimonialBody testimonial={testimonial} />
                     </div>

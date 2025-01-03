@@ -9,10 +9,10 @@ const IntroSection = () => {
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 lg:w-5/12">
             <div>
-              <h1 className="text-5xl font-bold leading-tight">
+              <h1 className="text-5xl font-bold leading-tight playwrite">
                 Flow with Nature, Glow with Confidence
               </h1>
-              <p className="text-2xl nf text-taupe-light mt-4">
+              <p className="text-2xl text-gray-600 mt-4">
                 Embrace Natural Ingredients Perfectly Suited for Your Hair.
               </p>
               <div className="btn-box mt-6 flex space-x-4">

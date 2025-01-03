@@ -10,6 +10,13 @@
   /* body {
     color: #f5f2e7;
   } */
+  /* html {
+    font-family: 'Playwrite AU SA', serif;
+  } */
+
+  .playwrite {
+    font-family: 'Playwrite AU SA', serif;
+  }
 
   .nf.text-baja{
     color: #BFA989;
@@ -23,16 +30,47 @@
     background-color: #a79376;
   }
 
-  .nf.text-olive{
+  .nf.text-skyblue{
     color: #b0d7f1;
   }
 
-  .nf.bg-olive{
+  .nf.bg-skyblue{
     background-color: #b0d7f1;
   }
 
-  .nf.outline-olive{
+  .nf.outline-skyblue{
     outline: #b0d7f1;
+  }
+  
+  .nf.text-cornflower{
+    color: #75b9e6;
+  }
+  .nf.bg-cornflower{
+    background-color: #75b9e6;
+  }
+
+  .nf.text-teal{
+    color: #30a2c2;
+  }
+
+  .nf.bg-teal{
+    background-color: #30a2c2;
+  }
+
+  .nf.border-teal{
+    border-color: #30a2c2;
+  }
+  
+  .nf.hover\:text-teal-light:hover{
+    color: #43c2e5;
+  }
+
+  .nf.hover\:text-cornflower-dark:hover{
+    color: #5f95b9;
+  }
+
+  .nf.hover\:bg-cornflower-dark:hover{
+    background-color: #5f95b9;
   }
   
   .nf.bg-eggshell{
@@ -41,18 +79,6 @@
 
   .nf.hover\:bg-eggshell-dark:hover{
     background-color: #cec8b5;
-  }
-
-  .nf.text-taupe-light{
-    color: #979797;
-  }
-
-  .nf.text-taupe{
-    color: #b5b5b5;
-  }
-
-  .nf.hover\:text-olive:hover{
-    color: #797E55;
   }
 
 }

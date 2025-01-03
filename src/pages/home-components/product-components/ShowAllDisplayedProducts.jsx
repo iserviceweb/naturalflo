@@ -11,12 +11,12 @@ const ShowAllDisplayedProducts = () => {
             <div className="p-4 row-span-1">
                 <hr className="w-full border-gray-300" />
                 <div className="flex flex-col items-center">
-                    <a href="#" className="text-md font-semibold text-gray-800 nf hover:text-olive transition">
+                    <a href="#" className="text-md font-semibold text-gray-800 nf hover:text-cornflower transition">
                         {product.name}
                     </a>
                     <div className="mt-2">
                         <h6 className="text-md font-bold text-gray-800">
-                            <span className="nf text-olive">$</span> {product.price}
+                            <span className="nf text-cornflower">$</span> {product.price}
                         </h6>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ const ShowAllDisplayedProducts = () => {
                 <img src={product.img} alt={product.name} className="w-full object-contain p-10 aspect-square" />
             ) : (
                 <div className="flex items-center justify-center w-full h-full">
-                    <PiHandSoap className="nf text-olive w-40 h-40" />
+                    <PiHandSoap className="nf text-skyblue w-40 h-40" />
                 </div>
             )}</div>
         );
