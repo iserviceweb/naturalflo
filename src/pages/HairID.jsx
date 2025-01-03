@@ -5,7 +5,7 @@ import Header from "./general-components/Header";
 const HairID = () => {
 
     const refs = {
-        'home': '/#',
+        'home': '/#home',
         'about': '/#about',
         'contact': '/#contact',
     };

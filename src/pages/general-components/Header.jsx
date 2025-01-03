@@ -6,6 +6,7 @@ const Header = ({ refs, redirect }) => {
   const location = useLocation();
 
   const hashRef = {
+    '#home': 'home',
     '#about': 'about',
     '#contact': 'contact',
   }
