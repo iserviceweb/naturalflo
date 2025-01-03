@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 const sendEmail = (e) => {
     e.preventDefault();
 
+    //client must set up their own emailjs for the contact for to send to them
     emailjs
         .sendForm("", "", e.target, {
             publicKey: "",

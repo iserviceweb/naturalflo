@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = ({ refs, redirect }) => {
@@ -16,13 +16,14 @@ const Header = ({ refs, redirect }) => {
       navigate(ref);
       return;
     }
+    navigate('/#');
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(()=>{
     const destRef = refs[hashRef[location.hash]];
     if (destRef) {
-      console.log(handleSmoothScroll(destRef));
+      handleSmoothScroll(destRef);
     }
   }, [location]);
 
@@ -31,8 +32,8 @@ const Header = ({ refs, redirect }) => {
       <header>
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between uppercase">
-            <button className="text-4xl font-bold"
-              onClick={()=>{navigate('/')}}
+            <button className="text-4xl font-bold my-4"
+              onClick={()=>{navigate('/#home')}}
             >
               <span className="playwrite">NaturalFlo</span>
             </button>
