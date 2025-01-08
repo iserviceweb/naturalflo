@@ -2,11 +2,12 @@
 import React, { useRef } from "react";
 import Header from "./general-components/Header";
 import IntroSection from "./home-components/IntroSection"
-import DisplayedProductSection from "./home-components/DisplayedProductSection";
+import FeaturedProductSection from "./home-components/FeaturedProductSection";
 import AboutSection from "./home-components/AboutSection";
 import TestimonialSection from "./home-components/TestimonialSection";
 import ContactSection from "./home-components/ContactSection";
 import HairIDIntro from "./home-components/HairIDIntro";
+import Footer from "./general-components/Footer";
 
 const Home = () => {
   const homeRef = useRef(null);
@@ -24,10 +25,11 @@ const Home = () => {
       <Header refs={refs} />
       <IntroSection/>
       <HairIDIntro/>
-      <DisplayedProductSection/>
+      <FeaturedProductSection/>
       <AboutSection ref={aboutSectionRef}/>
       <TestimonialSection/>
       <ContactSection ref={contactSectionRef}/>
+      <Footer/>
     </div>
   );
 };

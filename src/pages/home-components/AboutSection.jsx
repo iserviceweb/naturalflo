@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { BiLogoEbay, BiLogoEtsy } from 'react-icons/bi';
+import { BiLogoEtsy } from 'react-icons/bi';
 
 const AboutSection = forwardRef(({}, ref) => {
   return (
@@ -30,11 +30,8 @@ const AboutSection = forwardRef(({}, ref) => {
                 Lorem Ipsum generators on the Internet tend to repeat predefined
                 chunks.
               </p>
-              <h2 className="text-xl font-bold playwrite">Check out these links</h2>
+              <h2 className="text-xl font-bold playwrite">Check out our Etsy</h2>
               <div className="flex">
-                <a href="#">
-                  <BiLogoEbay className="w-16 h-16 rounded-full outline outline-4 m-4 hover:scale-110"/>
-                </a>
                 <a href="#">
                   <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 m-4  hover:scale-110"/>
                 </a>

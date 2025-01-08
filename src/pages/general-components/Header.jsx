@@ -37,6 +37,8 @@ const Header = ({ refs, redirect }) => {
             >
               <span className="playwrite">NaturalFlo</span>
             </button>
+            
+            {/* hamburger menu */}
             <button
               className="block md:hidden focus:outline-none"
               type="button"

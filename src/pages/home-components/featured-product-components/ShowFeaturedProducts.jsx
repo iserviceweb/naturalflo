@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from 'react-redux';
 import { PiHandSoap } from "react-icons/pi";
 
-const ShowAllDisplayedProducts = () => {
+const ShowFeaturedProducts = () => {
 
     const products = useSelector(state => state.product.products);
 
@@ -36,20 +36,28 @@ const ShowAllDisplayedProducts = () => {
         );
     }
 
+    const renderProduct = (product, index) => {
+        if (product.featured) {
+            return (
+                <div key={index} className="grid grid-rows-4 rounded-lg shadow-md overflow-hidden nf bg-eggshell">
+                    <div className="flex row-span-3">
+                        {renderImage(product)}
+                    </div>
+                    {renderProductDetails(product)}
+                </div>
+            );
+        }
+    };
+
     return (
         <div className="flex flex-col items-center">
             <div className=" grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[40em]">
                 {products.map((product, index) => (
-                    <div key={index} className="grid grid-rows-4 rounded-lg shadow-md overflow-hidden nf bg-eggshell">
-                        <div className="flex row-span-3">
-                            {renderImage(product)}
-                        </div>
-                        {renderProductDetails(product)}
-                    </div>
+                    renderProduct(product, index)
                 ))}
             </div>
         </div>
     );
 };
 
-export default ShowAllDisplayedProducts
+export default ShowFeaturedProducts;

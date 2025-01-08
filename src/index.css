@@ -42,6 +42,10 @@
     outline: #b0d7f1;
   }
   
+  .nf.bg-skygray{
+    background-color: #adc0cd;
+  }
+  
   .nf.text-cornflower{
     color: #75b9e6;
   }

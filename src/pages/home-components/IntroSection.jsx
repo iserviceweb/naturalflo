@@ -6,16 +6,16 @@ const IntroSection = () => {
   return (
     <section className="py-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center justify-center text-center">
           <div className="w-full md:w-1/2 lg:w-5/12">
             <div>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight playwrite">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold playwrite flex">
                 Flow with Nature, Glow with Confidence
               </h1>
-              <p className="text-2xl text-gray-600 mt-4">
+              <p className="text-2xl text-gray-600 mt-8">
                 Embrace Natural Ingredients Perfectly Suited for Your Hair.
               </p>
-              <div className="btn-box mt-6 flex space-x-4">
+              <div className="btn-box mt-6 flex space-x-4 justify-center">
                 <div
                   className="nf bg-baja text-white py-2 px-4 rounded hover:bg-baja-dark hover:text-gray-300 transition duration-300"
                   onClick={()=>{navigate('/#about')}}
@@ -29,14 +29,6 @@ const IntroSection = () => {
                   Contact Us
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2 lg:w-7/12">
-            <div className="img-box">
-              <img
-                src="images/temp/soap-temp.png"
-                className="w-full rounded-lg"
-              />
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const HairID = lazy(() => import("./pages/HairID"));
 function App() {
 
     return (
-        <div className="nf bg-skyblue">
+        <div className="nf bg-skyblue min-h-screen">
             <Suspense fallback={<LoadingPage/>}>
                 <Routes>
                     <Route exact path="/" element={<Home/>} />

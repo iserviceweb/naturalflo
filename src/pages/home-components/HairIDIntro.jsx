@@ -15,7 +15,7 @@ const HairIDIntro = () => {
             <div className='col-span-1 m-4 order-1 flex justify-center'>
               <img
                 src="images/temp/naturalflo-temp-logo.png"
-                alt="Logo"
+                alt="NaturalFlo Logo"
                 className="w-full max-w-[20rem]"
               />
             </div>
