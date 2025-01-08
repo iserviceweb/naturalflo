@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./general-components/Header";
+import Footer from "./general-components/Footer";
 
 const HairID = () => {
 
@@ -34,6 +35,7 @@ const HairID = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

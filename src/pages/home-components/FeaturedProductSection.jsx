@@ -1,10 +1,10 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import ShowFeaturedProducts from "./featured-product-components/ShowFeaturedProducts";
 
-const FeaturedProductSection = () => {
+const FeaturedProductSection = forwardRef(({}, ref) => {
 
     return (
-        <div className="py-16">
+        <div ref={ref} className="py-16">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -25,6 +25,6 @@ const FeaturedProductSection = () => {
             </div>
         </div>
     );
-};
+});
 
 export default FeaturedProductSection;

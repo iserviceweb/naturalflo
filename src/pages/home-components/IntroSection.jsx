@@ -9,7 +9,7 @@ const IntroSection = () => {
         <div className="flex flex-wrap items-center justify-center text-center">
           <div className="w-full md:w-1/2 lg:w-5/12">
             <div>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold playwrite flex">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold playwrite flex noselect">
                 Flow with Nature, Glow with Confidence
               </h1>
               <p className="text-2xl text-gray-600 mt-8">

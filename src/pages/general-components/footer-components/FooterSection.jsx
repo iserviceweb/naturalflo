@@ -9,7 +9,7 @@ const test = [
 ]
 
 
-const FooterSection = ({ title }) => {
+const FooterSection = ({ title, contents }) => {
     const navigate = useNavigate();
 
     const renderFooterLink = (footerLink) => {
@@ -39,18 +39,15 @@ const FooterSection = ({ title }) => {
 
     return (
         <div className="text-black w-full divide-y divide-black">
-            <div className="py-4 pr-40">
+            <div className="py-4">
                 {title}
             </div>
             <ul className="py-4">
-                {test.map((t) => (
-                    <li>
-                        {renderFooterLink(t)}
+                {contents.map((content, index) => (
+                    <li key={index}>
+                        {renderFooterLink(content)}
                     </li>
                 ))}
-                {/* <li>content1</li> */}
-                {/* <li>content2</li> */}
-                {/* <li>content2</li> */}
             </ul>
         </div>
     );

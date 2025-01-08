@@ -13,11 +13,13 @@ const Home = () => {
   const homeRef = useRef(null);
   const aboutSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
+  const featuredProductSectionRef = useRef(null);
 
   const refs = {
     'home': homeRef,
     'about': aboutSectionRef,
     'contact': contactSectionRef,
+    'featured': featuredProductSectionRef
   };
 
   return (
@@ -25,7 +27,7 @@ const Home = () => {
       <Header refs={refs} />
       <IntroSection/>
       <HairIDIntro/>
-      <FeaturedProductSection/>
+      <FeaturedProductSection ref={featuredProductSectionRef}/>
       <AboutSection ref={aboutSectionRef}/>
       <TestimonialSection/>
       <ContactSection ref={contactSectionRef}/>

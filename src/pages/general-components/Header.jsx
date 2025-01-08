@@ -9,6 +9,7 @@ const Header = ({ refs, redirect }) => {
     '#home': 'home',
     '#about': 'about',
     '#contact': 'contact',
+    '#featured': 'featured',
   }
   
   const handleSmoothScroll = (ref) => {
@@ -35,7 +36,7 @@ const Header = ({ refs, redirect }) => {
             <button className="text-4xl font-bold my-4"
               onClick={()=>{navigate('/#home')}}
             >
-              <span className="playwrite">NaturalFlo</span>
+              <span className="playwrite noselect">NaturalFlo</span>
             </button>
             
             {/* hamburger menu */}
@@ -50,21 +51,21 @@ const Header = ({ refs, redirect }) => {
             <div className="hidden md:flex p-5">
               <ul className="flex space-x-10">
                 <li className="">
-                  <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                  <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
                     onClick={() => {handleSmoothScroll(refs.home)}}
                   >
                     Home
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
                     onClick={() => {handleSmoothScroll(refs.about)}}
                   >
                     About
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md uppercase underline-offset-4"}
+                <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
                     onClick={() => {handleSmoothScroll(refs.contact)}}
                   >
                     Contact Us
