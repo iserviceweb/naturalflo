@@ -1,4 +1,5 @@
 import React, {forwardRef} from "react";
+import { Link } from 'react-router-dom';
 import ShowFeaturedProducts from "./featured-product-components/ShowFeaturedProducts";
 
 const FeaturedProductSection = forwardRef(({}, ref) => {
@@ -18,9 +19,7 @@ const FeaturedProductSection = forwardRef(({}, ref) => {
 
                 {/* View All Button */}
                 <div className="btn-box text-center mt-10">
-                    <a href="#" className="nf bg-baja text-white text-lg py-2 px-6 rounded hover:bg-baja-dark transition duration-300">
-                        View All
-                    </a>
+                    <Link className='nf bg-baja text-white text-lg py-2 px-6 rounded hover:bg-baja-dark transition duration-300' to={'/products'}>View All</Link>
                 </div>
             </div>
         </div>

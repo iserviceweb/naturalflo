@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "./general-components/Header";
 import Footer from "./general-components/Footer";
 
 const HairID = () => {
+    const hairIdRef = useRef(null);
 
     const refs = {
-        'home': '/#home',
-        'about': '/#about',
-        'contact': '/#contact',
+        home: { ref: '/#home', redirect: true },
+        about: { ref: '/#about', redirect: true },
+        contact: { ref: '/#contact', redirect: true },
     };
 
+    useEffect(() => {
+        hairIdRef.current.scrollIntoView({ behavior: 'auto' });
+    }, []);
+
     return (
-        <div>
-            <Header refs={refs} redirect={true} />
+        <div ref={hairIdRef}>
+            <Header refs={refs} />
             <div className="py-20 flex flex-col items-center">
                 <div className="container">
                     <div className="grid grid-cols-2">
@@ -35,7 +40,7 @@ const HairID = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

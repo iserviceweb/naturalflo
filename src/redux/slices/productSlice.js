@@ -2,9 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const products = [
-    { name: "Shampoo", img: "images/Shampoo.jpg", price: "XX.00", featured: true },
-    { name: "Conditioner", img: "images/Conditioner.jpg", price: "XX.00", featured: true },
-    { name: "Product3", img: "images/naturalflo-product3-front.jpeg", price: "XX.00", featured: false },
+    { name: "Shampoo", img: "images/Shampoo.jpg", price: "XX.00", description: 'Description of the product goes here.', featured: true },
+    { name: "Conditioner", img: "images/Conditioner.jpg", price: "XX.00", description: 'Description of the product goes here.', featured: true },
+    { name: "Product3", img: ["images/naturalflo-product3-front.jpeg", "images/naturalflo-product3-back.jpeg"], price: "XX.00", description: 'Description of the product goes here.', featured: false },
+    { name: "Product4", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', featured: false },
+    { name: "Product5", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', featured: false },
+    { name: "Product6", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', featured: false },
+    { name: "Product7", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', featured: false },
+    { name: "Product8", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', featured: false },
 ];
 
 const initialState = {

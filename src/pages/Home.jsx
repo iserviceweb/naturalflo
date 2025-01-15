@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "./general-components/Header";
 import IntroSection from "./home-components/IntroSection"
 import FeaturedProductSection from "./home-components/FeaturedProductSection";
@@ -16,22 +16,26 @@ const Home = () => {
   const featuredProductSectionRef = useRef(null);
 
   const refs = {
-    'home': homeRef,
-    'about': aboutSectionRef,
-    'contact': contactSectionRef,
-    'featured': featuredProductSectionRef
+    home: { ref: homeRef },
+    about: { ref: aboutSectionRef },
+    contact: { ref: contactSectionRef },
+    featured: { ref: featuredProductSectionRef },
   };
+
+  useEffect(() => {
+    homeRef.current.scrollIntoView({ behavior: 'auto' });
+  }, []);
 
   return (
     <div className="home" ref={homeRef}>
       <Header refs={refs} />
-      <IntroSection/>
-      <HairIDIntro/>
-      <FeaturedProductSection ref={featuredProductSectionRef}/>
-      <AboutSection ref={aboutSectionRef}/>
-      <TestimonialSection/>
-      <ContactSection ref={contactSectionRef}/>
-      <Footer/>
+      <IntroSection />
+      <HairIDIntro />
+      <FeaturedProductSection ref={featuredProductSectionRef} />
+      <AboutSection ref={aboutSectionRef} />
+      <TestimonialSection />
+      <ContactSection ref={contactSectionRef} />
+      <Footer />
     </div>
   );
 };

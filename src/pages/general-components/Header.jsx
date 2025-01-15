@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Header = ({ refs, redirect }) => {
+const Header = ({ refs }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -11,18 +11,19 @@ const Header = ({ refs, redirect }) => {
     '#contact': 'contact',
     '#featured': 'featured',
   }
-  
-  const handleSmoothScroll = (ref) => {
-    if(redirect){
-      navigate(ref);
+
+  const handleSmoothScroll = (destRef) => {
+    if (destRef.redirect) {
+      navigate(destRef.ref);
       return;
     }
     navigate('/#');
-    ref.current.scrollIntoView({ behavior: 'smooth' });
+    destRef.ref.current.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const destRef = refs[hashRef[location.hash]];
+
     if (destRef) {
       handleSmoothScroll(destRef);
     }
@@ -34,11 +35,11 @@ const Header = ({ refs, redirect }) => {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between uppercase">
             <button className="text-4xl font-bold my-4"
-              onClick={()=>{navigate('/#home')}}
+              onClick={() => { navigate('/#home') }}
             >
               <span className="playwrite noselect">NaturalFlo</span>
             </button>
-            
+
             {/* hamburger menu */}
             <button
               className="block md:hidden focus:outline-none"
@@ -52,21 +53,21 @@ const Header = ({ refs, redirect }) => {
               <ul className="flex space-x-10">
                 <li className="">
                   <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
-                    onClick={() => {handleSmoothScroll(refs.home)}}
+                    onClick={() => { handleSmoothScroll(refs.home) }}
                   >
                     Home
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
-                    onClick={() => {handleSmoothScroll(refs.about)}}
+                  <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
+                    onClick={() => { handleSmoothScroll(refs.about) }}
                   >
                     About
                   </button>
                 </li>
                 <li className="">
-                <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
-                    onClick={() => {handleSmoothScroll(refs.contact)}}
+                  <button className={"p-1 rounded-md uppercase underline-offset-4 noselect"}
+                    onClick={() => { handleSmoothScroll(refs.contact) }}
                   >
                     Contact Us
                   </button>

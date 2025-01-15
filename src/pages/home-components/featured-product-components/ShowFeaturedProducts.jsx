@@ -1,10 +1,11 @@
 import React from "react";
-import { useSelector } from 'react-redux';
 import { PiHandSoap } from "react-icons/pi";
+import useProductInfo from '../../../hooks/useProductInfo'
 
 const ShowFeaturedProducts = () => {
 
-    const products = useSelector(state => state.product.products);
+    const { productInfo } = useProductInfo();
+    const products = productInfo();
 
     const renderProductDetails = (product) => {
         return (

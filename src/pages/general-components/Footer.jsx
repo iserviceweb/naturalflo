@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import FooterSection from './footer-components/FooterSection';
 import NewsLetterSection from './footer-components/NewsLetterSection';
 
@@ -18,7 +17,7 @@ const Footer = () => {
                             title='Shop'
                             contents={[
                                 { title: 'Featured Products', link: '/#featured', type: 'navigate' },
-                                { title: 'Show All', link: '', type: 'link' },
+                                { title: 'Show All Products', link: '/products', type: 'link' },
                             ]}
                         />
                         <FooterSection className='col-span-1'
@@ -29,14 +28,14 @@ const Footer = () => {
                             ]}
                         />
                         <div className='col-span-1 md:col-span-3 lg:col-span-1 w-full'>
-                            <NewsLetterSection/>
+                            <NewsLetterSection />
                         </div>
                     </div>
 
                 </div>
-                    <div className="w-full text-center md:w-auto md:text-right flex justify-center">
-                        <p className="">&copy; 2025 NaturalFlo. All rights reserved.</p>
-                    </div>
+                <div className="w-full text-center md:w-auto md:text-right flex justify-center">
+                    <p className="">&copy; 2025 NaturalFlo. All rights reserved.</p>
+                </div>
             </div>
         </footer>
     );

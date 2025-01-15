@@ -8,15 +8,18 @@ import LoadingPage from "./LoadingPage";
 // Lazy-loaded components
 const Home = lazy(() => import("./pages/Home"));
 const HairID = lazy(() => import("./pages/HairID"));
-
+const Products = lazy(() => import("./pages/Products"));
+ 
 function App() {
 
     return (
         <div className="nf bg-skyblue min-h-screen">
+            {/* <LoadingPage/> */}
             <Suspense fallback={<LoadingPage/>}>
                 <Routes>
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/hair-id" element={<HairID/>} />
+                    <Route exact path="/products" element={<Products/>} />
                 </Routes>
             </Suspense>
         </div>
