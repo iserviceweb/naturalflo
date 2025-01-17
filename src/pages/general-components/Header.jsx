@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = ({ refs }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const hashRef = {
     '#home': 'home',
@@ -30,9 +31,9 @@ const Header = ({ refs }) => {
   }, [location]);
 
   return (
-    <div className="relative sticky top-0 nf bg-baja z-50">
+    <div className="relative sticky top-0 nf bg-baja z-50 h-20">
       <header>
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <nav className="flex items-center justify-between uppercase">
             <button className="text-4xl font-bold my-4"
               onClick={() => { navigate('/#home') }}
@@ -42,13 +43,15 @@ const Header = ({ refs }) => {
 
             {/* hamburger menu */}
             <button
-              className="block md:hidden focus:outline-none"
+              className="block md:hidden focus:outline-none ml-auto"
               type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="block w-6 h-1 bg-black my-1"></span>
               <span className="block w-6 h-1 bg-black my-1"></span>
               <span className="block w-6 h-1 bg-black my-1"></span>
             </button>
+            
             <div className="hidden md:flex p-5">
               <ul className="flex space-x-10">
                 <li className="">
@@ -76,6 +79,40 @@ const Header = ({ refs }) => {
             </div>
           </nav>
         </div>
+        
+        <div>
+              {isMenuOpen && (
+                <div className="mt-20 flex flex-col absolute top-0 right-0 md:hidden w-full">
+                  <ul className=" text-2xl">
+                    <li>
+                      <button
+                        className={"p-5 uppercase nf bg-skyblue opacity-90 w-full underline-offset-4 noselect"}
+                        onClick={() => { handleSmoothScroll(refs.home); setIsMenuOpen(false); }}
+                      >
+                        Home
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className={"p-5 uppercase nf bg-skyblue opacity-90 w-full underline-offset-4 noselect"}
+                        onClick={() => { handleSmoothScroll(refs.about); setIsMenuOpen(false); }}
+                      >
+                        About
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className={"p-5 uppercase nf bg-skyblue opacity-90 w-full underline-offset-4 noselect"}
+                        onClick={() => { handleSmoothScroll(refs.contact); setIsMenuOpen(false); }}
+                      >
+                        Contact Us
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
+
+            </div>
       </header>
     </div>
   );

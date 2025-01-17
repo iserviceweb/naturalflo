@@ -16,8 +16,8 @@ const Products = () => {
 
   const renderProducts = (product, index) => {
     return (
-      <div key={index} className="w-full">
-        <div className="bg-white p-6 shadow-md rounded-lg">
+      <div key={index} className="">
+        <div className="bg-gray-100 p-6 shadow-xl shadow-[#91bbd8] transform transition-all duration-300 hover:scale-105 rounded-xl">
           {product.img ? (
             <img src={product.img} alt={product.title} className=" h-48 object-cover rounded" />
           ) : (
@@ -27,7 +27,7 @@ const Products = () => {
           )}
           <h2 className="text-xl font-semibold">{product.name}</h2>
           <p className="text-gray-700">{product.description}</p>
-          <p className="text-red-500 font-bold">{product.price}</p>
+          <p className="nf text-cornflower font-bold">${product.price}</p>
         </div>
       </div>
     )
@@ -41,7 +41,7 @@ const Products = () => {
     <div ref={productsRef}>
       <Header refs={refs} redirect={true} />
       <div className="py-8">
-        <div className="flex flex-wrap grid grid-cols-4">
+        <div className="flex flex-wrap grid grid-cols-4 gap-10 p-10">
           {products.map((product, index) => (
             <div key={index} className='col-span-1'>
               {renderProducts(product, index)}

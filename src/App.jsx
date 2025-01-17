@@ -9,7 +9,7 @@ import LoadingPage from "./LoadingPage";
 const Home = lazy(() => import("./pages/Home"));
 const HairID = lazy(() => import("./pages/HairID"));
 const Products = lazy(() => import("./pages/Products"));
- 
+
 function App() {
 
     return (
