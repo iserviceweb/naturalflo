@@ -17,7 +17,7 @@ const Footer = () => {
                             title='Shop'
                             contents={[
                                 { title: 'Featured Products', link: '/#featured', type: 'navigate' },
-                                { title: 'Show All Products', link: '/products', type: 'link' },
+                                { title: 'All Products', link: '/products', type: 'link' },
                             ]}
                         />
                         <FooterSection className='col-span-1'
