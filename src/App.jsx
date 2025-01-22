@@ -9,6 +9,7 @@ import LoadingPage from "./LoadingPage";
 const Home = lazy(() => import("./pages/Home"));
 const HairID = lazy(() => import("./pages/HairID"));
 const Products = lazy(() => import("./pages/Products"));
+const CheckOut = lazy(() => import("./pages/CheckOut"));
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/hair-id" element={<HairID/>} />
                     <Route exact path="/products" element={<Products/>} />
+                    <Route exact path="/checkout" element={<CheckOut/>} />
                 </Routes>
             </Suspense>
         </div>

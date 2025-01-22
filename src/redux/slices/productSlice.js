@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const products = [
-    { name: "Shampoo", img: "images/Shampoo.jpg", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: true},
+    { name: "Shampoo", img: "images/Shampoo.jpg", price: "25.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: true},
     { name: "Conditioner", img: "images/Conditioner.jpg", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: true },
     { name: "Product3", img: ["images/naturalflo-product3-front.jpeg", "images/naturalflo-product3-back.jpeg"], price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
     { name: "Product4", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
