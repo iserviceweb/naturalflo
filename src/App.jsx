@@ -9,7 +9,8 @@ import LoadingPage from "./LoadingPage";
 const Home = lazy(() => import("./pages/Home"));
 const HairID = lazy(() => import("./pages/HairID"));
 const Products = lazy(() => import("./pages/Products"));
-const CheckOut = lazy(() => import("./pages/CheckOut"));
+const PaymentSummary = lazy(() => import("./pages/PaymentSummary"));
+const ProductPreview = lazy(() => import("./pages/ProductPreview"));
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/hair-id" element={<HairID/>} />
                     <Route exact path="/products" element={<Products/>} />
-                    <Route exact path="/checkout" element={<CheckOut/>} />
+                    <Route exact path="/products/preview/:preview" element={<ProductPreview/>} />
+                    <Route exact path="/payment-summary" element={<PaymentSummary/>} />
                 </Routes>
             </Suspense>
         </div>

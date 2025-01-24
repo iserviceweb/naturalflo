@@ -20,8 +20,6 @@ const Products = () => {
         <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-1 bg-gray-100 p-4 shadow-xl shadow-[#91bbd8] transform transition-all duration-300 hover:scale-105 rounded-xl">
           <div className='col-span-1 flex items-center justify-center'>
             {product.img ? (
-              // <img src={product.img} alt={product.title} className="h-48 object-cover rounded" />
-              
               <a href={product.link} target="_blank">
               <img src={product.img} alt={product.name} className="h-48 object-cover rounded" />
           </a>
@@ -39,7 +37,7 @@ const Products = () => {
                 {product.name}
             </a>
             <p className="font-bold"><span className="nf text-cornflower">$</span> {product.price}</p>
-            <p className="text-xl font-semibold hidden sm:block md:hidden">{product.description}</p>
+            <p className="text-xl font-semibold sm:text-md md:text-lg">{product.description}</p>
           </div>
         </div>
       </div>
@@ -52,7 +50,7 @@ const Products = () => {
 
   return (
     <div ref={productsRef}>
-      <Header refs={refs} redirect={true} />
+      <Header refs={refs} />
       <div className="py-8">
         <div className="flex flex-wrap grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 p-10">
           {products.map((product, index) => (

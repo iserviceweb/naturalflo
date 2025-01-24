@@ -25,25 +25,48 @@ const useProductInfo = () => {
 
     const products = useSelector(state => state.product.products);
 
+    const getImage = (productImage, index = 0) => {
+        if (Array.isArray(productImage)) {
+            return getValidImageUrl(productImage[index]);
+        } else {
+            return getValidImageUrl(productImage);
+        }
+    };
+
+    const getImageArray = (productImage) => {
+        if (Array.isArray(productImage)) {
+            return productImage;
+        } else {
+            return [getValidImageUrl(productImage)];
+        }
+    };
+
     const productInfo = () => {
-        const getImage = (productImage, index = 0) => {
-            if (Array.isArray(productImage)) {
-                return getValidImageUrl(productImage[index]);
-            } else {
-                return getValidImageUrl(productImage);
-            }
-        };
 
         return products.map((product) => (
             {
                 ...product,
                 img: getImage(product.img),
                 getImage: (index) => { return getImage(product.img, index) },
+                getImageArray: () => { return getImage(product.img) },
             }
         ));
     };
 
-    return { productInfo };
+    const getProductByID = (id) => {
+        const product = products.find(product =>product.productID === id)
+        if(product.productID === id){
+            return ({
+                ...product,
+                img: getImage(product.img),
+                getImage: (index) => { return getImage(product.img, index) },
+                getImageArray: () => { return getImageArray(product.img) },
+            })
+        }
+        return null
+    }
+
+    return { productInfo, getProductByID };
 };
 
 export default useProductInfo;

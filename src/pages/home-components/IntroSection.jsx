@@ -18,13 +18,13 @@ const IntroSection = () => {
               <div className="btn-box mt-6 flex space-x-4 justify-center">
                 <div
                   className="nf bg-baja text-white py-2 px-4 rounded hover:bg-baja-dark hover:text-gray-300 transition duration-300"
-                  onClick={()=>{navigate('/#about')}}
+                  onClick={() => {navigate('/#about')}}
                 >
                   Read More
                 </div>
                 <div
                   className="nf bg-eggshell text-gray-800 py-2 px-4 rounded hover:bg-eggshell-dark transition duration-300"
-                  onClick={()=>{navigate('/#contact')}}
+                  onClick={() => {navigate('/#contact')}}
                 >
                   Contact Us
                 </div>
