@@ -39,7 +39,7 @@ const Products = () => {
                 {product.name}
             </a>
             <p className="font-bold"><span className="nf text-cornflower">$</span> {product.price}</p>
-            <p className="text-xl font-semibold hidden sm:block md:hidden">{product.description}</p>
+            <p className="text-xl font-semibold sm:text-md md:text-lg">{product.description}</p>
           </div>
         </div>
       </div>
