@@ -14,11 +14,11 @@ const products = [
         priceID: 'price_1QkXbYB7DxHdGWiwePkuuA4B',
         featured: false
     },
-    { name: "Product4", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QkXGNB7DxHdGWiwzqfDQIQu', featured: false },
-    { name: "Product5", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QkXGNB7DxHdGWiwzqfDQIQu', featured: false },
-    { name: "Product6", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QkXGNB7DxHdGWiwzqfDQIQu', featured: false },
-    { name: "Product7", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QkXGNB7DxHdGWiwzqfDQIQu', featured: false },
-    { name: "Product8", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QkXGNB7DxHdGWiwzqfDQIQu', featured: false },
+    { name: "Product4", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QlyPGB7DxHdGWiwCE8ufSz0', featured: true },
+    { name: "Product5", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QlyPGB7DxHdGWiwCE8ufSz0', featured: false },
+    { name: "Product6", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QlyPGB7DxHdGWiwCE8ufSz0', featured: false },
+    { name: "Product7", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QlyPGB7DxHdGWiwCE8ufSz0', featured: false },
+    { name: "Product8", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', productID: 'prod_Rdou6nt9GOoq60', priceID: 'price_1QlyPGB7DxHdGWiwCE8ufSz0', featured: false },
 ];
 
 const initialState = {

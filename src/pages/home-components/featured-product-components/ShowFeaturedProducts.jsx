@@ -13,9 +13,6 @@ const ShowFeaturedProducts = () => {
             <div className="p-4 row-span-1">
                 <hr className="w-full border-gray-300" />
                 <div className="flex flex-col items-center">
-                    {/* <a href={product.link} target="_blank" className="text-md font-semibold text-gray-800 nf hover:text-cornflower transition">
-                        {product.name}
-                    </a> */}
                     <Link to={'/products/preview/'+product.productID}
                         className="text-md font-semibold text-gray-800 nf hover:text-cornflower transition"
                     >
@@ -34,16 +31,13 @@ const ShowFeaturedProducts = () => {
     const renderImage = (product) => {
         return (
             <div className="w-full h-full p-10">{product.img ? (
-                // <a href={product.link} target="_blank">
-                //     <img src={product.img} alt={product.name} className="h-48 rounded-2xl object-cover" />
-                // </a>
                 <Link to={'/products/preview/'+product.productID}>
                     <img src={product.img} alt={product.name} className="h-48 object-cover rounded" />
                 </Link>
             ) : (
-                <a href={product.link} target="_blank" className="flex items-center justify-center w-full h-full">
+                <Link to={'/products/preview/'+product.productID} className="flex items-center justify-center w-full h-full">
                     <PiHandSoap className="nf text-skyblue w-40 h-40" />
-                </a>
+                </Link>
             )}</div>
         );
     }
