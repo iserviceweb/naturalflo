@@ -3,6 +3,7 @@ import { PiHandSoap } from "react-icons/pi";
 import useProductInfo from '../hooks/useProductInfo'
 import Header from './general-components/Header';
 import Footer from './general-components/Footer';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const productsRef = useRef(null);
@@ -20,9 +21,9 @@ const Products = () => {
         <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-1 bg-gray-100 p-4 shadow-xl shadow-[#91bbd8] transform transition-all duration-300 hover:scale-105 rounded-xl">
           <div className='col-span-1 flex items-center justify-center'>
             {product.img ? (
-              <a href={product.link} target="_blank">
-              <img src={product.img} alt={product.name} className="h-48 object-cover rounded" />
-          </a>
+              <Link to={'preview/'+product.productID}>
+                 <img src={product.img} alt={product.name} className="h-48 object-cover rounded" />
+              </Link>
             ) : (
               <div className="flex items-center justify-center w-full h-48">
                 <PiHandSoap className="nf text-skyblue w-40 h-40" />
@@ -32,10 +33,12 @@ const Products = () => {
           <div className='mt-2 col-span-1 
                           sm:col-span-3 sm:pl-4
                           md:col-span-1 md:pl-0'>
-            <hr className="w-full border-gray-300 mt-6 block sm:hidden md:block"/>
-            <a href={product.link} target="_blank" className="text-xl font-semibold nf hover:text-cornflower transition">
+            <hr className="w-full border-gray-300 mt-6 block sm:hidden md:block" />
+            <Link to={'/products/preview/'+product.productID}
+                className="text-xl font-semibold nf hover:text-cornflower transition"
+            >
                 {product.name}
-            </a>
+            </Link>
             <p className="font-bold"><span className="nf text-cornflower">$</span> {product.price}</p>
             <p className="text-xl font-semibold sm:text-md md:text-lg">{product.description}</p>
           </div>
