@@ -27,14 +27,16 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home" ref={homeRef}>
+    <div className="home body" ref={homeRef}>
       <Header refs={refs} />
-      <IntroSection />
-      <HairIDIntro />
-      <FeaturedProductSection ref={featuredProductSectionRef} />
-      <AboutSection ref={aboutSectionRef} />
-      <TestimonialSection />
-      <ContactSection ref={contactSectionRef} />
+      <div className="main">
+        <IntroSection />
+        <HairIDIntro />
+        <FeaturedProductSection ref={featuredProductSectionRef} />
+        <AboutSection ref={aboutSectionRef} />
+        <TestimonialSection />
+        <ContactSection ref={contactSectionRef} />
+      </div>
       <Footer />
     </div>
   );

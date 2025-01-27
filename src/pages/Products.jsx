@@ -51,9 +51,9 @@ const Products = () => {
   }, []);
 
   return (
-    <div ref={productsRef}>
+    <div ref={productsRef} className='body'>
       <Header refs={refs} redirect={true} />
-      <div className="py-8">
+      <div className="py-8 main">
         <div className="flex flex-wrap grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 p-10">
           {products.map((product, index) => (
             <div key={index} className='col-span-1'>

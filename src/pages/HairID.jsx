@@ -16,9 +16,9 @@ const HairID = () => {
     }, []);
 
     return (
-        <div ref={hairIdRef}>
+        <div ref={hairIdRef} className="body">
             <Header refs={refs} />
-            <div className="py-20 flex flex-col items-center">
+            <div className="py-20 flex flex-col items-center main">
                 <div className="container">
                     <div className="grid grid-cols-2">
                         <div className="px-4 mb-8 md:mb-0 col-span-2 lg:col-span-1">
