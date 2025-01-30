@@ -1,18 +1,11 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-const NewsLetterSection = () => {
+const SocialLinks = () => {
     return (
         <div className="text-black w-full divide-y divide-black">
-            <div className="py-4 pr-40 lg:mb-7"></div>
+            <div className="py-4">Follow Us</div>
             <ul className="py-4 text-sm">
-                <li>Sign up to our newsletter to receive 10% off your first order </li>
-                <li className='py-4'>
-                    <input type="email"
-                        placeholder='Please enter your email'
-                        className='p-4 rounded-full h-10 w-full focus:outline-none border border-black nf bg-baja placeholder-black'
-                    />
-                </li>
                 <li className='flex space-x-4'>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
                         <FaFacebookF size={20} />
@@ -32,4 +25,4 @@ const NewsLetterSection = () => {
     );
 };
 
-export default NewsLetterSection;
+export default SocialLinks;

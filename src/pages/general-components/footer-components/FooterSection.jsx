@@ -1,14 +1,6 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-
-const test = [
-    { title: 'test about', link: '/#about', type: 'navigate' },
-    { title: 'test hair', link: '/hair-id', type: 'link' },
-    { title: 'test google', link: 'https://google.com', type: 'new tab' },
-]
-
-
 const FooterSection = ({ title, contents }) => {
     const navigate = useNavigate();
 
