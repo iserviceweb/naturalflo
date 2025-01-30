@@ -1,6 +1,9 @@
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = loadStripe('pk_test_51Qjra5B7DxHdGWiwfyQhISENXUop1tpRdQAHmsweNpiRwVLEjbvziakRPQvBuJiaRGyfjy6pXOXgHagmwFbGzY0900WsSoCKUi');
+//client must set up their own stripe to use this
+
+const stripePromise = loadStripe(/*Insert public key here*/'pk_test_51Qjra5B7DxHdGWiwfyQhISENXUop1tpRdQAHmsweNpiRwVLEjbvziakRPQvBuJiaRGyfjy6pXOXgHagmwFbGzY0900WsSoCKUi');
+const siteUrl = 'http://localhost:5173'
 
 const useStripeOTP = () => {
 
@@ -13,7 +16,7 @@ const useStripeOTP = () => {
                 quantity: Number(quantity),
             }],
             mode: 'payment',
-            successUrl: 'http://localhost:5173/#/payment-summary',
+            successUrl: siteUrl+'/#/order-complete',
             cancelUrl: cancelURL,
         });
     };
