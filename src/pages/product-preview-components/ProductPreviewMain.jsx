@@ -12,7 +12,7 @@ const ProductPreviewMain = () => {
     const productID = location.pathname.replace('/products/preview/', '');
     const product = getProductByID(productID)
     const [quantity, setQuantity] = useState(1);
-    const siteUrl = 'http://localhost:5173/#' /*INSERT:siteUrl*/
+    const siteUrl = 'http://localhost:5174/#' /*INSERT:siteUrl*/
 
     //change localhost 
     const handleClick = async (event) => {

@@ -3,7 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 //client must set up their own stripe to use this
 
 const stripePromise = loadStripe('INSERT:stripePublicKey');
-const siteUrl = 'http://localhost:5173/#' /*INSERT:siteUrl*/
+const siteUrl = 'http://localhost:5174/#' /*INSERT:siteUrl*/
 
 const useStripeOTP = () => {
 
