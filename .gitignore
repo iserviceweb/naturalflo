@@ -5,3 +5,4 @@ dist
 .env
 *.timestamp-*
 .vercel
+vite/deps/
