@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from "react-router-dom";
-import { PiHandSoap } from "react-icons/pi";
 import useProductInfo from '../../hooks/useProductInfo';
-import useStripeOTP from "../../hooks/useStripeOTP";
 import DisplayProductPreview from './preview-main-components/DisplayProductPreview';
 
 const ProductPreviewMain = () => {
     const { getProductByID } = useProductInfo();
-    const { oneTimePayment } = useStripeOTP();
     const location = useLocation();
     const productID = location.pathname.replace('/products/preview/', '');
     const product = getProductByID(productID)
-    const [quantity, setQuantity] = useState(1);
-    const siteUrl = 'http://localhost:5173/#' /*INSERT:siteUrl*/
-
-    //change localhost 
-    const handleClick = async (event) => {
-        oneTimePayment(product.priceID, siteUrl + location.pathname, quantity);
-    };
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 my-10 main">
