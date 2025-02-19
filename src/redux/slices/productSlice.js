@@ -9,7 +9,6 @@ const products = [
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
         productID: 'INSERT:yourProductID0',
-        priceID: 'price_1Qjs97B7DxHdGWiwV7H0w9Pt',
         featured: true
     },
     {
