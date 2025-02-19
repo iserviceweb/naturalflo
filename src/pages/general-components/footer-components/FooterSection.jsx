@@ -8,7 +8,7 @@ const FooterSection = ({ title, contents }) => {
         if (footerLink.type === 'navigate') {
             return (
                 <div
-                    className="cursor-pointer"
+                    className="cursor-pointer hover:text-gray-600"
                     onClick={() => { navigate(footerLink.link) }}
                 >
                     {footerLink.title}
@@ -16,13 +16,13 @@ const FooterSection = ({ title, contents }) => {
             );
         } else if (footerLink.type === 'link') {
             return (
-                <Link to={footerLink.link}>
+                <Link to={footerLink.link} className="hover:text-gray-600">
                     {footerLink.title}
                 </Link>
             );
         } else if (footerLink.type === 'new tab') {
             return (
-                <a href={footerLink.link} target="_blank" rel="noopener noreferrer">
+                <a href={footerLink.link} target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
                     {footerLink.title}
                 </a>
             );

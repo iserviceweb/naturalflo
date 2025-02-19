@@ -2,8 +2,8 @@ import { loadStripe } from '@stripe/stripe-js';
 
 //client must set up their own stripe to use this
 
-const stripePromise = loadStripe('INSERT:stripePublicKey');
-const siteUrl = 'http://localhost:5174/#' /*INSERT:siteUrl*/
+const stripePromise = loadStripe('pk_test_51Qjra5B7DxHdGWiwfyQhISENXUop1tpRdQAHmsweNpiRwVLEjbvziakRPQvBuJiaRGyfjy6pXOXgHagmwFbGzY0900WsSoCKUi');
+const siteUrl = 'http://localhost:5173/#' /*INSERT:siteUrl*/
 
 const useStripeOTP = () => {
 
@@ -18,6 +18,7 @@ const useStripeOTP = () => {
             mode: 'payment',
             successUrl: siteUrl+'/order-complete',
             cancelUrl: cancelURL,
+            billingAddressCollection: "required", // Ensures the user must enter an address
         });
     };
 

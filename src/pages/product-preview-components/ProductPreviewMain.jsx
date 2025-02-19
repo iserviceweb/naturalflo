@@ -12,29 +12,11 @@ const ProductPreviewMain = () => {
     const productID = location.pathname.replace('/products/preview/', '');
     const product = getProductByID(productID)
     const [quantity, setQuantity] = useState(1);
-    const siteUrl = 'http://localhost:5174/#' /*INSERT:siteUrl*/
+    const siteUrl = 'http://localhost:5173/#' /*INSERT:siteUrl*/
 
     //change localhost 
     const handleClick = async (event) => {
         oneTimePayment(product.priceID, siteUrl + location.pathname, quantity);
-    };
-
-    const renderSelect = () => {
-        const optionLength = 30;
-        const numArray = [];
-        for (let i = 1; i <= optionLength; i++) {
-            numArray.push(i);
-        }
-        return (
-            <select className='p-1 border border-gray-500 bg-gray-200 rounded w-32'
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-            >
-                {numArray.map((number) => (
-                    <option key={number} value={number}>Quantity: {number}</option>
-                ))}
-            </select>
-        );
     };
 
     return (
@@ -53,14 +35,12 @@ const ProductPreviewMain = () => {
 
                         <div className='text-xl md:text-2xl'>{product.description}</div>
                         <div className='text-xl font-bold'> ${product.price}</div>
-                        <div className='flex items-center'> {renderSelect()}</div>
 
-                        <button
-                            className='p-1 nf bg-cornflower text-white rounded-full w-32'
-                            onClick={handleClick}
-                        >
+                        <div className='py-1.5 px-8 nf bg-cornflower text-white rounded-full w-32'>
+                        <a href={product.link}>
                             Buy Now
-                        </button>
+                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
