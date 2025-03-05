@@ -10,7 +10,7 @@ const DisplayProductPreview = ({ product }) => {
             <div>
                 {displayedImage ? (
                     <img src={displayedImage} alt={product.name}
-                        className="h-[15rem] md:h-[25rem] lg:w-[30rem] lg:h-[40rem] object-fit rounded-md noselect  "
+                        className="h-[18rem] md:h-[30rem] lg:w-[34rem] lg:h-[36rem] object-fit rounded-md noselect"
                     />
                 ) : (
                     <div
@@ -25,7 +25,7 @@ const DisplayProductPreview = ({ product }) => {
 
     return (
         <div className="flex justify-center md:justify-end">
-            <div className='grid grid-cols-1 xl:flex'>
+            <div className='grid grid-cols-1 xl:flex md:ml-4'>
                 <div className={`
                     ${product.getImageArray().length <= 1 ? 'justify-center hidden xl:block': ''}
                     mt-10 order-2 xl:order-1 xl:mt-0 px-10 xl:px-0 

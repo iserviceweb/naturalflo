@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const products = [
     {
         name: "Shampoo",
-        img: "images/Shampoo.jpg",
+        img: "images/Shampoo.png",
         price: "INSERT:price",
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
@@ -13,7 +13,7 @@ const products = [
     },
     {
         name: "Conditioner",
-        img: "images/Conditioner.jpg",
+        img: "images/Conditioner.png",
         price: "INSERT:price",
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
