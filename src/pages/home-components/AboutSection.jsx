@@ -32,7 +32,7 @@ const AboutSection = forwardRef(({}, ref) => {
               </p>
               <h2 className="text-xl font-bold playwrite">Check out our Etsy</h2>
               <div className="flex">
-                <a href="https://www.etsy.com/" target='_blank'>
+                <a href="https://www.etsy.com/people/6awjsqitqd5cqdj3" target='_blank'>
                   <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 m-4  hover:scale-110"/>
                 </a>
               </div>
