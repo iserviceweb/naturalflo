@@ -1,6 +1,7 @@
 import React from 'react';
 import FooterSection from './footer-components/FooterSection';
 import SocialLinks from './footer-components/SocialLinks';
+import Links from '../../utils/Links';
 
 const Footer = () => {
 
@@ -11,7 +12,7 @@ const Footer = () => {
 
                     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 sm:text-md md:text-lg lg:text-xl w-full'>
                         <div className="flex justify-center md:justify-start items-center col-span-1">
-                            <img src="images/temp/naturalflo-temp-logo.png" alt="NaturalFlo Logo" className='h-[10rem] w-[15rem] object-contain' />
+                            <img src={Links.images.logo} alt="NaturalFlo Logo" className='h-[10rem] w-[15rem] object-contain' />
                         </div>
                         <div className='col-span-1 pr-10 lg:pr-5 text-nowrap'>
                             <FooterSection

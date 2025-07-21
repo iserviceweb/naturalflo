@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Header from "./general-components/Header";
 import Footer from "./general-components/Footer";
+import Links from "../utils/Links";
 
 const HairID = () => {
     const hairIdRef = useRef(null);
@@ -24,7 +25,7 @@ const HairID = () => {
                     <div className="grid grid-cols-2">
                         <div className={`relative mx-4 col-span-2 lg:col-span-1 bg-gray-600 rounded-xl ${isLoading ? 'opacity-50' : 'opacity-100'}`}>
                             <img
-                                src="images/temp/temp-hair.jpg"
+                                src={Links.images.hairID}
                                 alt="temp picture"
                                 className="w-full h-[15rem] md:h-[25rem] lg:h-[35rem] object-cover rounded-xl"
                                 onLoad={() => {setIsLoading(false)}}

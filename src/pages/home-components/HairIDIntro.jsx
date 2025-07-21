@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Links from '../../utils/Links';
 
 const HairIDIntro = () => {
   return (
@@ -14,7 +15,7 @@ const HairIDIntro = () => {
             </h1>
             <div className='col-span-1 m-4 order-1 flex justify-center'>
               <img
-                src="images/temp/naturalflo-temp-logo.png"
+                src={Links.images.logo}
                 alt="NaturalFlo Logo"
                 className="w-full max-w-[20rem]"
               />

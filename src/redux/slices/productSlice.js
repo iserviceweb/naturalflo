@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+import Links from '../../utils/Links';
 
 
 const products = [
     {
         name: "Shampoo",
-        img: "images/Shampoo.png",
+        img: Links.images.shampoo,
         price: "INSERT:price",
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
@@ -13,7 +14,7 @@ const products = [
     },
     {
         name: "Conditioner",
-        img: "images/Conditioner.png",
+        img: Links.images.conditioner,
         price: "INSERT:price",
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
@@ -22,18 +23,18 @@ const products = [
     },
     {
         name: "Product3",
-        img: ["images/naturalflo-product3-front.jpeg", "images/naturalflo-product3-back.jpeg"],
+        img: [Links.images.product3Front, Links.images.product3Back],
         price: "INSERT:price",
         description: 'Description of the product goes here.',
         link: 'INSERT:paymentlink',
         productID: 'INSERT:yourProductID2',
         featured: false
     },
-    { name: "Product4", img: "image/fake-img.png", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID3', featured: false },
-    { name: "Product5", img: "image/fake-img.png", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID4', featured: false },
-    { name: "Product6", img: "image/fake-img.png", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID5', featured: false },
-    { name: "Product7", img: "image/fake-img.png", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID6', featured: false },
-    { name: "Product8", img: "image/fake-img.png", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID7', featured: false },
+    { name: "Product4", img: "", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID3', featured: false },
+    { name: "Product5", img: "", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID4', featured: false },
+    { name: "Product6", img: "", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID5', featured: false },
+    { name: "Product7", img: "", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID6', featured: false },
+    { name: "Product8", img: "", price: "INSERT:price", description: 'Description of the product goes here.', link: 'INSERT:paymentlink', productID: 'INSERT:yourProductID7', featured: false },
 ];
 
 const initialState = {
