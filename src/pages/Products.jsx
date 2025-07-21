@@ -20,8 +20,6 @@ const Products = () => {
         <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-1 bg-gray-100 p-4 shadow-xl shadow-[#91bbd8] transform transition-all duration-300 hover:scale-105 rounded-xl">
           <div className='col-span-1 flex items-center justify-center'>
             {product.img ? (
-              // <img src={product.img} alt={product.title} className="h-48 object-cover rounded" />
-              
               <a href={product.link} target="_blank">
               <img src={product.img} alt={product.name} className="h-48 object-cover rounded" />
           </a>
