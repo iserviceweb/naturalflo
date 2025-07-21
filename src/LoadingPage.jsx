@@ -1,11 +1,12 @@
 import React from "react";
+import Links from "./utils/Links";
 
 const LoadingPage = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen nf bg-skyblue">
             <div className="relative">
                 <img 
-                    src="/images/temp/naturalflo-temp-logo.png" 
+                    src={Links.images.logo}
                     alt="Loading" 
                     className="animate-pulse opacity-70"
                 />

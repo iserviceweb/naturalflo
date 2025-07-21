@@ -2,6 +2,7 @@ import React, { useState, forwardRef } from 'react';
 import { BiLogoEtsy } from 'react-icons/bi';
 import { BsChevronDown } from "react-icons/bs";
 import AboutContent from './about-components/AboutContent';
+import Links from '../../utils/Links';
 
 const AboutSection = forwardRef(({ }, ref) => {
   const [expandedAbout, setExpandedAbout] = useState(false);
@@ -17,7 +18,7 @@ const AboutSection = forwardRef(({ }, ref) => {
             `}>
               <div className="img-box">
                 <img
-                  src="images/temp/about-temp.png"
+                  src={Links.images.about}
                   alt="About Us"
                   className="w-full h-auto object-cover"
                 />
