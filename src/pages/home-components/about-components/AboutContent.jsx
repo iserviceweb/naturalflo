@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { BiLogoEtsy } from 'react-icons/bi';
 import { BsChevronDown } from "react-icons/bs";
+import Links from "../../../utils/Links";
 
 const AboutContent = ({ expandedAbout, setExpandedAbout }) => {
     const [height, setHeight] = useState('0px');
@@ -46,7 +47,7 @@ const AboutContent = ({ expandedAbout, setExpandedAbout }) => {
 
                 <h2 className="mt-6 text-xl font-bold playwrite">Check out our Etsy</h2>
                 <div className="flex">
-                    <a href="https://www.etsy.com/people/6awjsqitqd5cqdj3" target='_blank'>
+                    <a href={Links.etsy} target='_blank'>
                         <BiLogoEtsy className="w-16 h-16 rounded-full outline outline-4 m-4  hover:scale-110" />
                     </a>
                 </div>

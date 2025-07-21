@@ -3,14 +3,14 @@ import Links from '../../utils/Links';
 
 
 const products = [
-    { name: "Shampoo", img: "images/Shampoo.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: true},
-    { name: "Conditioner", img: "images/Conditioner.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: true },
-    { name: "Product3", img: ["images/naturalflo-product3-front.jpeg", "images/naturalflo-product3-back.jpeg"], price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
-    { name: "Product4", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
-    { name: "Product5", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
-    { name: "Product6", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
-    { name: "Product7", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
-    { name: "Product8", img: "image/fake-img.png", price: "XX.00", description: 'Description of the product goes here.', link: 'https://www.etsy.com/', featured: false },
+    { name: "Shampoo", img: Links.shampoo, price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: true},
+    { name: "Conditioner", img: Links.conditioner, price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: true },
+    { name: "Product3", img: [Links.product3Front, Links.product3Back], price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
+    { name: "Product4", img: "", price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
+    { name: "Product5", img: "", price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
+    { name: "Product6", img: "", price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
+    { name: "Product7", img: "", price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
+    { name: "Product8", img: "", price: "XX.00", description: 'Description of the product goes here.', link: Links.etsy, featured: false },
 ];
 
 const initialState = {
